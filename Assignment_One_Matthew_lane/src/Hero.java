@@ -54,7 +54,7 @@ public class Hero {
 	public void show()
 	{
 		System.out.println("---------------------------------");
-		System.out.println("Name:" + this.name);
+		System.out.println("Name: " + this.name);
 		System.out.println("Strength: " + this.strength);
 		System.out.println("Speed: " + this.speed);
 		System.out.println("Health: " + this.health);
@@ -63,7 +63,7 @@ public class Hero {
 	
 	//This method is called when a hero is fighting.
 	public void fight(){
-		System.out.println(this.name + "Is attempting to hit!");
+		System.out.println(this.name + " Is attempting to hit!");
 		Boolean hitSuccess = hitAttempt();
 		
 		if (hitSuccess == true)
@@ -95,7 +95,7 @@ public class Hero {
 	//A hit was successful, how much damage was done?
 	public int hitDamage(){
 		int damage = (this.strength * (int)(Math.random() * 6 + 1));
-		System.out.println(damage + "Damage was done!");
+		System.out.println(damage + " Damage was done!");
 		
 		return damage;
 	}
