@@ -1,54 +1,32 @@
 /* Assignment One, Matthew Lane (200214586)*/
 
+//This class generates the hero and it's abilities.
 public class Hero {
-	//PRIVATE PROPERTIES ++++++++++++++++++++++++++++++++
+	
+	//PRIVATE PROPERTIES 
 	private int strength;
 	private int speed;
 	private int health;
-	//PUBLIC PROPERTIES +++++++++++++++++++++++++++++++++
+	
+	//PUBLIC PROPERTIES 
 	public String name;
 	
-	//CONSTRUCTOR++++++++++++++++++++++++++++++++++++++++
+	//CONSTRUCTOR OF HERO CLASS
 	public Hero(String name){
 		this.name = name;
 		generateAbilities();
 	}
 	
-	//GETTERS +++++++++++++++++++++++++++++++++++++++++++
-	public int getStrength() {
-		return strength;
-	}
+	//PRIVATE METHODS 
 	
-	public int getSpeed() {
-		return speed;
-	}
-	
-	public int getHealth() {
-		return health;
-	}
-	
-	//SETTERS ++++++++++++++++++++++++++++++++++++++++++++
-	
-	//This method sets the speed of the hero.
-	public void setSpeed(int speed) {
-		this.speed = speed;
-	}
-
-	//This method sets the health of the hero.
-	public void setHealth(int health) {
-		this.health = health;
-	}
-	
-	//PRIVATE METHODS +++++++++++++++++++++++++++++++++
-	
-	//This method generates the unique abilities for the hero.
+	//This method generates the unique abilities for the hero. The hero has 3 properties, strength, speed and health.
 	private void generateAbilities(){
 		this.strength = (int)(Math.random() * 100 + 1);
 		this.speed = (int)(Math.random() * 100 + 1);
 		this.health = (int)(Math.random() * 100 + 1);
 	}
 	
-	//PUBLIC METHODS ++++++++++++++++++++++++++++++++++
+	//PUBLIC METHODS 
 	
 	//This method displays the name and stats of the hero.
 	public void show()
@@ -65,17 +43,12 @@ public class Hero {
 	public void fight(){
 		System.out.println(this.name + " Is attempting to hit!");
 		Boolean hitSuccess = hitAttempt();
-		
+		//The hero landed a blow!
 		if (hitSuccess == true)
 			hitDamage();
 		
-		else
+		else//*The price is right failure music here*
 			System.out.println("The hit was unsuccessfull!");
-	}
-	
-	//This method allows the hero to run away.
-	public void run(){
-		System.out.println(this.name + " is Running");
 	}
 	
 	//The hero has attempted a hit. Decide if it has succeeded.
