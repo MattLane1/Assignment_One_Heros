@@ -43,9 +43,10 @@ public class Hero {
 	public void fight(){
 		System.out.println(this.name + " Is attempting to hit!");
 		Boolean hitSuccess = hitAttempt();
-		//The hero landed a blow!
+		
+		//The hero landed a blow! Calculate the damage and print it to the console. 
 		if (hitSuccess == true)
-			hitDamage();
+			System.out.println(hitDamage() + " Damage was done!");
 		
 		else//*The price is right failure music here*
 			System.out.println("The hit was unsuccessfull!");
@@ -56,9 +57,11 @@ public class Hero {
 		int didHit = (int)(Math.random() * 100 + 1);
 		Boolean hit = false;
 		
+		//20% chance of hitting.
 		if (didHit <= 20)
 			hit = true;
 		
+		//80% chance of failing to hit.
 		else 
 			hit = false;
 		
@@ -67,8 +70,8 @@ public class Hero {
 	
 	//A hit was successful, how much damage was done?
 	public int hitDamage(){
+		//Damage = Hero's Strength multiplied by a random number between 1 and 6.
 		int damage = (this.strength * (int)(Math.random() * 6 + 1));
-		System.out.println(damage + " Damage was done!");
 		
 		return damage;
 	}

@@ -2,7 +2,7 @@
  * @author Matthew Lane (200214586)
  * @date 01/25/2015
  * @description Assignment 1, Hero project, COMP1011
- * @version 3
+ * @version 4
  */
 public class CreateAndUseHeros {
 
